@@ -1,26 +1,26 @@
 /*
- * BuzzerClass.h
+ * DigitalOutputClass.h
  *
  * Created: 1/2/2020 2:29:39 AM
  *  Author: Khaled
  */ 
 
-#ifndef _BUZZER_CLASSS_H_ 
-#define _BUZZER_CLASSS_H_  
+#ifndef _DIGITALOUTPUT_CLASS_H_ 
+#define _DIGITALOUTPUT_CLASS_H_  
 
 #include <stdbool.h>
 #include <avr/io.h>
 
 
-typedef struct Buzzer{
+typedef struct DigitalOutput{
 	
 	char BUZZER_PORT ;
 	int BUZZER_PIN ;
 	
-}Buzzer;
+}DigitalOutput;
 
 
-void buzzer_set_stutus(char port , int pin ,bool status){
+void digital_output_set_stutus(char port , int pin ,bool status){
 		 
 		
 	switch(port){
@@ -74,7 +74,7 @@ void buzzer_set_stutus(char port , int pin ,bool status){
 }
 	
 	
-bool buzzer_get_stutus(char port , int pin){
+bool digital_output_get_stutus(char port , int pin){
 		
 	bool status=0 ;
 		
