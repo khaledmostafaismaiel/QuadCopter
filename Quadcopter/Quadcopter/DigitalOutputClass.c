@@ -6,6 +6,6 @@
  */ 
 
 
-#include "BuzzerClass.h"
+#include "DigitalOutputClass.h"
 
 

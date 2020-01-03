@@ -5,8 +5,8 @@
  *  Author: Khaled
  */ 
 
-#ifndef _DIGITALOUTPUT_CLASS_H_ 
-#define _DIGITALOUTPUT_CLASS_H_  
+#ifndef DIGITALOUTPUTCLASS_H_ 
+#define DIGITALOUTPUTCLASS_H_  
 
 #include <stdbool.h>
 #include <avr/io.h>
@@ -14,90 +14,85 @@
 
 typedef struct DigitalOutput{
 	
-	char BUZZER_PORT ;
-	int BUZZER_PIN ;
+	char PORT ;
+	int PIN ;
 	
 }DigitalOutput;
 
 
-void digital_output_set_stutus(char port , int pin ,bool status){
+void digital_output_set_stutus(DigitalOutput device,bool status){
 		 
 		
-	switch(port){
+	switch(device.PORT){
 			
 			
-		case 'A' :  DDRA |= (1 << pin);
+		case 'A' :  DDRA |= (1 << device.PIN);
 		
 					if(status == true){
-						PORTA |= (1 << pin);
-						break;
+						PORTA |= (1 << device.PIN);
 					}else{
-						PORTA |= (0 << pin);
-						break;
+						PORTA |= (0 << device.PIN);
 					}
 		
 			
-		case 'B' :  DDRB |= (1 << pin);
+		case 'B' :  DDRB |= (1 << device.PIN);
 					if(status == true){
-						PORTB |= (1 << pin);
-						break;
+						PORTB |= (1 << device.PIN);
 					}else{
-						PORTB |= (0 << pin);
-						break;
+						PORTB |= (0 << device.PIN);
 					}
+					break;
 		
 			
-		case 'C' :	DDRC |= (1 << pin);
+		case 'C' :	DDRC |= (1 << device.PIN);
 					if(status == true){
-						PORTC |= (1 << pin);
-						break;
+						PORTC |= (1 << device.PIN);
 					}else{
-						PORTC |= (0 << pin);
-						break;
+						PORTC |= (0 << device.PIN);
 					}
+					break;
 		
 			
-		case 'D' :  DDRD |= (1 << pin);
+		case 'D' :  DDRD |= (1 << device.PIN);
 					if(status == true){
-						PORTD |= (1 << pin);
-						break;
+						PORTD |= (1 << device.PIN);
 					}else{
-						PORTD |= (0 << pin);
-						break;
+						PORTD |= (0 << device.PIN);
 					}
+					break;
 		
 			
-			default: ;
-			break;
+			default:	 ;
+					break;
 		}
 		
 }
 	
 	
-bool digital_output_get_stutus(char port , int pin){
+bool digital_output_get_stutus(DigitalOutput device){
 		
 	bool status=0 ;
 		
-	switch(port){
+	switch(device.PORT){
 			
-		case 'A' :  DDRA |= (1 << pin);
-		status = PINA & (1 << pin);
-		return status;
+		case 'A' :  DDRA |= (1 << device.PIN);
+					status = PINA & (1 << device.PIN);
+					return status;
 				
-		case 'B' :  DDRB |= (1 << pin);
-		status = PINA & (1 << pin);
-		return status;
+		case 'B' :  DDRB |= (1 << device.PIN);
+					status = PINA & (1 << device.PIN);
+					return status;
 				
-		case 'C' :	DDRC |= (1 << pin);
-		status = PINA & (1 << pin);
-		return status;
+		case 'C' :	DDRC |= (1 << device.PIN);
+					status = PINA & (1 << device.PIN);
+					return status;
 				
-		case 'D' :  DDRD |= (1 << pin);
-		status = PINA & (1 << pin);
-		return status;
+		case 'D' :  DDRD |= (1 << device.PIN);
+					status = PINA & (1 << device.PIN);
+					return status;
 				
-		default: ;
-		return status;
+		default:				 ;
+					return status;
 		
 	}
 	

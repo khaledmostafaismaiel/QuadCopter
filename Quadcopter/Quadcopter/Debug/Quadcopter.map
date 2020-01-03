@@ -7,23 +7,29 @@ Discarded input sections
 
  .data          0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
  .bss           0x00000000        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .text          0x00000000        0x0 BuzzerClass.o
- .data          0x00000000        0x0 BuzzerClass.o
- .bss           0x00000000        0x0 BuzzerClass.o
- .text.buzzer_set_stutus
-                0x00000000       0xae BuzzerClass.o
- .text.buzzer_get_stutus
-                0x00000000       0xb2 BuzzerClass.o
- .debug_info    0x00000000      0x10f BuzzerClass.o
- .debug_abbrev  0x00000000       0xa9 BuzzerClass.o
- .debug_loc     0x00000000      0x161 BuzzerClass.o
+ .text          0x00000000        0x0 DigitalInputClass.o
+ .data          0x00000000        0x0 DigitalInputClass.o
+ .bss           0x00000000        0x0 DigitalInputClass.o
+ .debug_line    0x00000000        0x0 DigitalInputClass.o
+ .debug_str     0x00000000      0x103 DigitalInputClass.o
+ .comment       0x00000000       0x31 DigitalInputClass.o
+ .text          0x00000000        0x0 DigitalOutputClass.o
+ .data          0x00000000        0x0 DigitalOutputClass.o
+ .bss           0x00000000        0x0 DigitalOutputClass.o
+ .text.digital_output_set_stutus
+                0x00000000       0xc0 DigitalOutputClass.o
+ .text.digital_output_get_stutus
+                0x00000000       0xb2 DigitalOutputClass.o
+ .debug_info    0x00000000      0x12b DigitalOutputClass.o
+ .debug_abbrev  0x00000000       0xb8 DigitalOutputClass.o
+ .debug_loc     0x00000000       0x70 DigitalOutputClass.o
  .debug_aranges
-                0x00000000       0x28 BuzzerClass.o
- .debug_ranges  0x00000000       0x18 BuzzerClass.o
- .debug_line    0x00000000      0x19d BuzzerClass.o
- .debug_str     0x00000000      0x1af BuzzerClass.o
- .comment       0x00000000       0x31 BuzzerClass.o
- .debug_frame   0x00000000       0x34 BuzzerClass.o
+                0x00000000       0x28 DigitalOutputClass.o
+ .debug_ranges  0x00000000       0x18 DigitalOutputClass.o
+ .debug_line    0x00000000      0x180 DigitalOutputClass.o
+ .debug_str     0x00000000      0x1d3 DigitalOutputClass.o
+ .comment       0x00000000       0x31 DigitalOutputClass.o
+ .debug_frame   0x00000000       0x34 DigitalOutputClass.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -59,7 +65,8 @@ user_signatures  0x00850000         0x00000400         rw !x
 Linker script and memory map
 
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
-LOAD BuzzerClass.o
+LOAD DigitalInputClass.o
+LOAD DigitalOutputClass.o
 LOAD main.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
@@ -392,11 +399,11 @@ END GROUP
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 main.o
 
-.debug_str      0x00000000      0x2cc
+.debug_str      0x00000000      0x2c4
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_str     0x00000196      0x136 main.o
-                                0x16a (size before relaxing)
+ .debug_str     0x00000196      0x12e main.o
+                                0x162 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

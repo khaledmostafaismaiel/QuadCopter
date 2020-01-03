@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-BuzzerClass.c
+DigitalInputClass.c
+
+DigitalOutputClass.c
 
 main.c
 
