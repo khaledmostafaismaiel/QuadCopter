@@ -5,18 +5,31 @@
  * Author : Khaled
  */ 
 
-#define F_CPU 8000000UL
 
 #include <avr/io.h>
-#include <util/delay.h>
 
+
+#define F_CPU 8000000UL
+#include <util/delay.h>
 
 int main(void)
 {
-    /* Replace with your application code */
+	
+	
+	Init();
+	
+	init_loop();
+
+	start();
+
+
+
     while (1) 
     {
-
+		loop();
     }
+
+
+
 }
 
