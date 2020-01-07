@@ -15,18 +15,20 @@
 int main(void)
 {
 	
+
+DDRA |= (1 << 1);
+
 	
-	Init();
 	
-	init_loop();
-
-	start();
-
-
 
     while (1) 
     {
-		loop();
+		
+		PORTA |= (1 << 1);
+		_delay_ms(1000);
+		PORTA &= ~(1 << 1);
+		_delay_ms(1000);
+
     }
 
 

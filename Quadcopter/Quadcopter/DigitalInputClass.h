@@ -22,9 +22,10 @@ typedef struct DigitalInput{
 
 
 void digital_input_init(DigitalInput device);
-
-
 bool digital_input_get_stutus(DigitalInput device);
+char digital_input_get_port(DigitalInput device);
+int digital_input_get_pin(DigitalInput device);
+int digital_input_get_pullup_status(DigitalInput device);
 
 
 #endif /* DIGITALINPUTCLASS_H_ */

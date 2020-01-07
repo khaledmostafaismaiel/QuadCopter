@@ -27,8 +27,9 @@ void digital_output_set_stutus(DigitalOutput device,bool status);
 	
 bool digital_output_get_stutus(DigitalOutput device);
 
+char digital_output_get_port(DigitalOutput device);
 
-
+int digital_output_get_pin(DigitalOutput device);
 
 
 #endif

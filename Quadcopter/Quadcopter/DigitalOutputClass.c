@@ -118,3 +118,17 @@ bool digital_output_get_stutus(DigitalOutput device){
 	}
 	
 }
+
+
+
+char digital_output_get_port(DigitalOutput device){
+	
+	return device.PORT;
+	
+}
+
+
+int digital_output_get_pin(DigitalOutput device){
+	
+	return device.PIN
+}

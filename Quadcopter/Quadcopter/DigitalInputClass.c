@@ -82,3 +82,23 @@ bool digital_input_get_stutus(DigitalInput device){
 	}
 	
 }
+
+
+
+char digital_input_get_port(DigitalInput device){
+	
+	return device.PORT;
+	
+}
+
+
+int digital_input_get_pin(DigitalInput device){
+	
+		return device.PIN;
+}
+
+
+int digital_input_get_pullup_status(DigitalInput device){
+	
+	return device.PULLUP;
+}

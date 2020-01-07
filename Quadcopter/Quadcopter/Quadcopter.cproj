@@ -40,7 +40,7 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>custom</avrtool>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
     <avrtoolserialnumber />
     <avrdeviceexpectedsignature>0x1E9502</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_simulator>
@@ -148,6 +148,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BrushLessMotorClass.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BrushLessMotorClass.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DigitalInputClass.c">
       <SubType>compile</SubType>
     </Compile>
@@ -160,6 +166,18 @@
     <Compile Include="DigitalOutputClass.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="FlightsClass.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FlightsClass.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2cClass.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="I2cClass.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -167,6 +185,18 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="OpModeClass.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PwmClass.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="PwmClass.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UltraSonicClass.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UltraSonicClass.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
