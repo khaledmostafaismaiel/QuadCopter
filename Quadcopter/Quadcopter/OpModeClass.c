@@ -8,10 +8,18 @@
 
 #include "OpModeClass.h"
 
+DigitalOutput led ;
 
 
 void Init(){
-_delay_ms(1000);
+
+led.PORT = 'D' ;
+led.PIN = 6 ; 
+
+timer0_pwm_init();
+timer1A_pwm_init();
+timer1B_pwm_init();
+timer2_pwm_init();
 }
 
 
@@ -28,7 +36,24 @@ _delay_ms(1000);
 
 
 void loop(){
-	
-_delay_ms(1000);
+
+
+for(int i = 0 ; i < 255 ; ++i){
+	set_timer0_pwm(i);
+	set_timer1A_pwm(i);
+	set_timer1B_pwm(i);
+	set_timer2_pwm(i);
+	_delay_ms(10);
+}
+
+for(int i=255 ; i > 0 ; --i){
+	set_timer0_pwm(i);
+	set_timer1A_pwm(i);
+	set_timer1B_pwm(i);
+	set_timer2_pwm(i);
+	_delay_ms(10);
 
 }
+
+}
+

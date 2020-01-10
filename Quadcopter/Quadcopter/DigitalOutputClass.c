@@ -52,7 +52,7 @@ void digital_output_set_stutus(DigitalOutput device,bool status){
 		if(status == true){
 			PORTA |= (1 << device.PIN);
 			}else{
-			PORTA |= (0 << device.PIN);
+			PORTA &= !(0 << device.PIN);
 		}
 		
 		
@@ -60,7 +60,7 @@ void digital_output_set_stutus(DigitalOutput device,bool status){
 		if(status == true){
 			PORTB |= (1 << device.PIN);
 			}else{
-			PORTB |= (0 << device.PIN);
+			PORTB &= !(0 << device.PIN);
 		}
 		break;
 		
@@ -69,7 +69,7 @@ void digital_output_set_stutus(DigitalOutput device,bool status){
 		if(status == true){
 			PORTC |= (1 << device.PIN);
 			}else{
-			PORTC |= (0 << device.PIN);
+			PORTC &= !(0 << device.PIN);
 		}
 		break;
 		
@@ -78,7 +78,7 @@ void digital_output_set_stutus(DigitalOutput device,bool status){
 		if(status == true){
 			PORTD |= (1 << device.PIN);
 			}else{
-			PORTD |= (0 << device.PIN);
+			PORTD &= !(0 << device.PIN);
 		}
 		break;
 		
@@ -130,5 +130,5 @@ char digital_output_get_port(DigitalOutput device){
 
 int digital_output_get_pin(DigitalOutput device){
 	
-	return device.PIN
+	return device.PIN ;
 }

@@ -10,7 +10,11 @@
 #define OPMODECLASS_H_
 
 #define F_CPU 8000000UL
+#include <avr/io.h>
 #include <util/delay.h>
+#include "DigitalOutputClass.h"
+#include "DigitalInputClass.h"
+#include "PwmClass.h"
 
 void Init();
 

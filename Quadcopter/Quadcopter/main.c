@@ -7,27 +7,27 @@
 
 
 #include <avr/io.h>
-
-
 #define F_CPU 8000000UL
 #include <util/delay.h>
+#include "OpModeClass.h"
+#include "PwmClass.h"
+#include "DigitalOutputClass.h"
+#include "DigitalInputClass.h"
 
 int main(void)
 {
 	
+	Init();
 
-DDRA |= (1 << 1);
+	init_loop() ;
 
-	
+	start();
 	
 
     while (1) 
     {
 		
-		PORTA |= (1 << 1);
-		_delay_ms(1000);
-		PORTA &= ~(1 << 1);
-		_delay_ms(1000);
+		loop();
 
     }
 

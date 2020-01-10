@@ -3,55 +3,57 @@ Quadcopter.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000009c  00000000  00000000  00000054  2**1
+  0 .text         0000018a  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000000f0  2**0
+  1 .data         00000000  00800060  00800060  000001fe  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000000f0  2**0
+  2 .bss          00000003  00800060  00800060  000001fe  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000001fe  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000120  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000230  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  0000015c  2**0
+  5 .debug_aranges 000000d0  00000000  00000000  0000026c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   0000062a  00000000  00000000  0000017c  2**0
+  6 .debug_info   00000c6d  00000000  00000000  0000033c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000058b  00000000  00000000  000007a6  2**0
+  7 .debug_abbrev 0000072c  00000000  00000000  00000fa9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000024d  00000000  00000000  00000d31  2**0
+  8 .debug_line   00000568  00000000  00000000  000016d5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  00000f80  2**2
+  9 .debug_frame  00000158  00000000  00000000  00001c40  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000317  00000000  00000000  00000fa4  2**0
+ 10 .debug_str    0000043a  00000000  00000000  00001d98  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000048  00000000  00000000  000012bb  2**0
+ 11 .debug_loc    0000018b  00000000  00000000  000021d2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  00001303  2**0
+ 12 .debug_ranges 000000a0  00000000  00000000  0000235d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
-   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
-  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
 
 00000054 <__ctors_end>:
   54:	11 24       	eor	r1, r1
@@ -60,58 +62,264 @@ Disassembly of section .text:
   5a:	d8 e0       	ldi	r29, 0x08	; 8
   5c:	de bf       	out	0x3e, r29	; 62
   5e:	cd bf       	out	0x3d, r28	; 61
-  60:	0e 94 36 00 	call	0x6c	; 0x6c <main>
-  64:	0c 94 4c 00 	jmp	0x98	; 0x98 <_exit>
 
-00000068 <__bad_interrupt>:
-  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+00000060 <__do_clear_bss>:
+  60:	20 e0       	ldi	r18, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
 
-0000006c <main>:
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a3 36       	cpi	r26, 0x63	; 99
+  6c:	b2 07       	cpc	r27, r18
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 3e 00 	call	0x7c	; 0x7c <main>
+  74:	0c 94 c3 00 	jmp	0x186	; 0x186 <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <main>:
+#include "DigitalInputClass.h"
 
 int main(void)
 {
 	
+Init();
+  7c:	0e 94 47 00 	call	0x8e	; 0x8e <Init>
 
-DDRA |= (1 << 1);
-  6c:	d1 9a       	sbi	0x1a, 1	; 26
+init_loop() ;
+  80:	0e 94 58 00 	call	0xb0	; 0xb0 <init_loop>
+
+start();
+  84:	0e 94 62 00 	call	0xc4	; 0xc4 <start>
 	
 
     while (1) 
     {
 		
-		PORTA |= (1 << 1);
-  6e:	d9 9a       	sbi	0x1b, 1	; 27
+loop();
+  88:	0e 94 6c 00 	call	0xd8	; 0xd8 <loop>
+  8c:	fd cf       	rjmp	.-6      	; 0x88 <main+0xc>
+
+0000008e <Init>:
+DigitalOutput led ;
+
+
+void Init(){
+
+led.PORT = 'D' ;
+  8e:	e0 e6       	ldi	r30, 0x60	; 96
+  90:	f0 e0       	ldi	r31, 0x00	; 0
+  92:	84 e4       	ldi	r24, 0x44	; 68
+  94:	80 83       	st	Z, r24
+led.PIN = 6 ; 
+  96:	86 e0       	ldi	r24, 0x06	; 6
+  98:	90 e0       	ldi	r25, 0x00	; 0
+  9a:	92 83       	std	Z+2, r25	; 0x02
+  9c:	81 83       	std	Z+1, r24	; 0x01
+
+timer0_pwm_init();
+  9e:	0e 94 9f 00 	call	0x13e	; 0x13e <timer0_pwm_init>
+timer1A_pwm_init();
+  a2:	0e 94 a6 00 	call	0x14c	; 0x14c <timer1A_pwm_init>
+timer1B_pwm_init();
+  a6:	0e 94 b1 00 	call	0x162	; 0x162 <timer1B_pwm_init>
+timer2_pwm_init();
+  aa:	0e 94 bc 00 	call	0x178	; 0x178 <timer2_pwm_init>
+  ae:	08 95       	ret
+
+000000b0 <init_loop>:
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  70:	2f ef       	ldi	r18, 0xFF	; 255
-  72:	89 e6       	ldi	r24, 0x69	; 105
-  74:	98 e1       	ldi	r25, 0x18	; 24
-  76:	21 50       	subi	r18, 0x01	; 1
-  78:	80 40       	sbci	r24, 0x00	; 0
-  7a:	90 40       	sbci	r25, 0x00	; 0
-  7c:	e1 f7       	brne	.-8      	; 0x76 <main+0xa>
-  7e:	00 c0       	rjmp	.+0      	; 0x80 <main+0x14>
-  80:	00 00       	nop
-		_delay_ms(1000);
-		PORTA &= ~(1 << 1);
-  82:	d9 98       	cbi	0x1b, 1	; 27
-  84:	2f ef       	ldi	r18, 0xFF	; 255
-  86:	89 e6       	ldi	r24, 0x69	; 105
-  88:	98 e1       	ldi	r25, 0x18	; 24
-  8a:	21 50       	subi	r18, 0x01	; 1
-  8c:	80 40       	sbci	r24, 0x00	; 0
-  8e:	90 40       	sbci	r25, 0x00	; 0
-  90:	e1 f7       	brne	.-8      	; 0x8a <main+0x1e>
-  92:	00 c0       	rjmp	.+0      	; 0x94 <main+0x28>
-  94:	00 00       	nop
-  96:	eb cf       	rjmp	.-42     	; 0x6e <main+0x2>
+  b0:	2f ef       	ldi	r18, 0xFF	; 255
+  b2:	89 e6       	ldi	r24, 0x69	; 105
+  b4:	98 e1       	ldi	r25, 0x18	; 24
+  b6:	21 50       	subi	r18, 0x01	; 1
+  b8:	80 40       	sbci	r24, 0x00	; 0
+  ba:	90 40       	sbci	r25, 0x00	; 0
+  bc:	e1 f7       	brne	.-8      	; 0xb6 <init_loop+0x6>
+  be:	00 c0       	rjmp	.+0      	; 0xc0 <init_loop+0x10>
+  c0:	00 00       	nop
+  c2:	08 95       	ret
 
-00000098 <_exit>:
-  98:	f8 94       	cli
+000000c4 <start>:
+  c4:	2f ef       	ldi	r18, 0xFF	; 255
+  c6:	89 e6       	ldi	r24, 0x69	; 105
+  c8:	98 e1       	ldi	r25, 0x18	; 24
+  ca:	21 50       	subi	r18, 0x01	; 1
+  cc:	80 40       	sbci	r24, 0x00	; 0
+  ce:	90 40       	sbci	r25, 0x00	; 0
+  d0:	e1 f7       	brne	.-8      	; 0xca <start+0x6>
+  d2:	00 c0       	rjmp	.+0      	; 0xd4 <start+0x10>
+  d4:	00 00       	nop
+  d6:	08 95       	ret
 
-0000009a <__stop_program>:
-  9a:	ff cf       	rjmp	.-2      	; 0x9a <__stop_program>
+000000d8 <loop>:
+_delay_ms(1000);
+
+}
+
+
+void loop(){
+  d8:	cf 93       	push	r28
+  da:	df 93       	push	r29
+
+
+for(int i = 0 ; i < 255 ; ++i){
+  dc:	c0 e0       	ldi	r28, 0x00	; 0
+  de:	d0 e0       	ldi	r29, 0x00	; 0
+	set_timer0_pwm(i);
+  e0:	ce 01       	movw	r24, r28
+  e2:	0e 94 a4 00 	call	0x148	; 0x148 <set_timer0_pwm>
+	set_timer1A_pwm(i);
+  e6:	ce 01       	movw	r24, r28
+  e8:	0e 94 ae 00 	call	0x15c	; 0x15c <set_timer1A_pwm>
+	set_timer1B_pwm(i);
+  ec:	ce 01       	movw	r24, r28
+  ee:	0e 94 b9 00 	call	0x172	; 0x172 <set_timer1B_pwm>
+	set_timer2_pwm(i);
+  f2:	ce 01       	movw	r24, r28
+  f4:	0e 94 c1 00 	call	0x182	; 0x182 <set_timer2_pwm>
+  f8:	8f e1       	ldi	r24, 0x1F	; 31
+  fa:	9e e4       	ldi	r25, 0x4E	; 78
+  fc:	01 97       	sbiw	r24, 0x01	; 1
+  fe:	f1 f7       	brne	.-4      	; 0xfc <loop+0x24>
+ 100:	00 c0       	rjmp	.+0      	; 0x102 <loop+0x2a>
+ 102:	00 00       	nop
+
+
+void loop(){
+
+
+for(int i = 0 ; i < 255 ; ++i){
+ 104:	21 96       	adiw	r28, 0x01	; 1
+ 106:	cf 3f       	cpi	r28, 0xFF	; 255
+ 108:	d1 05       	cpc	r29, r1
+ 10a:	51 f7       	brne	.-44     	; 0xe0 <loop+0x8>
+ 10c:	cf ef       	ldi	r28, 0xFF	; 255
+ 10e:	d0 e0       	ldi	r29, 0x00	; 0
+	set_timer2_pwm(i);
+	_delay_ms(10);
+}
+
+for(int i=255 ; i > 0 ; --i){
+	set_timer0_pwm(i);
+ 110:	ce 01       	movw	r24, r28
+ 112:	0e 94 a4 00 	call	0x148	; 0x148 <set_timer0_pwm>
+	set_timer1A_pwm(i);
+ 116:	ce 01       	movw	r24, r28
+ 118:	0e 94 ae 00 	call	0x15c	; 0x15c <set_timer1A_pwm>
+	set_timer1B_pwm(i);
+ 11c:	ce 01       	movw	r24, r28
+ 11e:	0e 94 b9 00 	call	0x172	; 0x172 <set_timer1B_pwm>
+	set_timer2_pwm(i);
+ 122:	ce 01       	movw	r24, r28
+ 124:	0e 94 c1 00 	call	0x182	; 0x182 <set_timer2_pwm>
+ 128:	8f e1       	ldi	r24, 0x1F	; 31
+ 12a:	9e e4       	ldi	r25, 0x4E	; 78
+ 12c:	01 97       	sbiw	r24, 0x01	; 1
+ 12e:	f1 f7       	brne	.-4      	; 0x12c <loop+0x54>
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <loop+0x5a>
+ 132:	00 00       	nop
+	set_timer1B_pwm(i);
+	set_timer2_pwm(i);
+	_delay_ms(10);
+}
+
+for(int i=255 ; i > 0 ; --i){
+ 134:	21 97       	sbiw	r28, 0x01	; 1
+ 136:	61 f7       	brne	.-40     	; 0x110 <loop+0x38>
+	set_timer2_pwm(i);
+	_delay_ms(10);
+
+}
+
+}
+ 138:	df 91       	pop	r29
+ 13a:	cf 91       	pop	r28
+ 13c:	08 95       	ret
+
+0000013e <timer0_pwm_init>:
+
+
+int get_timer1B_pwm(){
+	
+	return OCR1B;
+}
+ 13e:	83 b7       	in	r24, 0x33	; 51
+ 140:	89 66       	ori	r24, 0x69	; 105
+ 142:	83 bf       	out	0x33, r24	; 51
+ 144:	bb 9a       	sbi	0x17, 3	; 23
+ 146:	08 95       	ret
+
+00000148 <set_timer0_pwm>:
+ 148:	8c bf       	out	0x3c, r24	; 60
+ 14a:	08 95       	ret
+
+0000014c <timer1A_pwm_init>:
+ 14c:	8f b5       	in	r24, 0x2f	; 47
+ 14e:	80 68       	ori	r24, 0x80	; 128
+ 150:	8f bd       	out	0x2f, r24	; 47
+ 152:	8e b5       	in	r24, 0x2e	; 46
+ 154:	82 60       	ori	r24, 0x02	; 2
+ 156:	8e bd       	out	0x2e, r24	; 46
+ 158:	8d 9a       	sbi	0x11, 5	; 17
+ 15a:	08 95       	ret
+
+0000015c <set_timer1A_pwm>:
+ 15c:	9b bd       	out	0x2b, r25	; 43
+ 15e:	8a bd       	out	0x2a, r24	; 42
+ 160:	08 95       	ret
+
+00000162 <timer1B_pwm_init>:
+ 162:	8f b5       	in	r24, 0x2f	; 47
+ 164:	80 62       	ori	r24, 0x20	; 32
+ 166:	8f bd       	out	0x2f, r24	; 47
+ 168:	8e b5       	in	r24, 0x2e	; 46
+ 16a:	82 60       	ori	r24, 0x02	; 2
+ 16c:	8e bd       	out	0x2e, r24	; 46
+ 16e:	8c 9a       	sbi	0x11, 4	; 17
+ 170:	08 95       	ret
+
+00000172 <set_timer1B_pwm>:
+ 172:	99 bd       	out	0x29, r25	; 41
+ 174:	88 bd       	out	0x28, r24	; 40
+ 176:	08 95       	ret
+
+00000178 <timer2_pwm_init>:
+
+
+
+void timer2_pwm_init(){
+	
+	TCCR2 |= (1 << WGM21) | (1 << WGM20) | (1 << CS20) |( 1 << COM21);
+ 178:	85 b5       	in	r24, 0x25	; 37
+ 17a:	89 66       	ori	r24, 0x69	; 105
+ 17c:	85 bd       	out	0x25, r24	; 37
+	DDRD |= (1 << PIND7);
+ 17e:	8f 9a       	sbi	0x11, 7	; 17
+ 180:	08 95       	ret
+
+00000182 <set_timer2_pwm>:
+
+}
+
+void set_timer2_pwm(int duty_cycle){
+	
+	OCR2 = duty_cycle ;
+ 182:	83 bd       	out	0x23, r24	; 35
+ 184:	08 95       	ret
+
+00000186 <_exit>:
+ 186:	f8 94       	cli
+
+00000188 <__stop_program>:
+ 188:	ff cf       	rjmp	.-2      	; 0x188 <__stop_program>
